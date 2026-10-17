@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Presentación | Ing. Gabriela Vásconez</title>
+    <!-- Tailwind CSS para un diseño moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts para una tipografía elegante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .footer-font {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.35rem;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .glassmorphism {
+            background: rgba(245, 242, 235, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(210, 200, 185, 0.4);
+        }
+        .wave-clip {
+            clip-path: url(#wave-shape);
+        }
+        .modal-content-scroll {
+             max-height: 80vh;
+             overflow-y: auto;
+        }
+        .carousel-track {
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide {
+            flex: 0 0 100%;
+        }
+    </style>
+</head>
+<body class="bg-[#2D2A26] flex justify-center sm:items-center min-h-screen sm:p-4">
+
+    <svg width="0" height="0" class="absolute">
+        <defs>
+            <clipPath id="wave-shape" clipPathUnits="objectBoundingBox">
+                <path d="M 0,0 L 1,0 L 1,0.85 Q 0.5,1.05 0,0.85 Z" />
+            </clipPath>
+        </defs>
+    </svg>
+
+    <div class="w-full sm:max-w-sm bg-[#F5F2EB] sm:rounded-3xl sm:shadow-2xl sm:shadow-black/60 overflow-hidden fade-in relative min-h-screen sm:min-h-0 flex flex-col text-black">
+        
+        <!-- Botón para Instalar Tarjeta -->
+        <a href="#" id="install-button" title="Instalar en mi dispositivo" class="absolute top-4 left-4 z-10 text-white bg-[#318CE7] p-2 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2zM12 9v4m0 0l-2-2m2 2l2-2" />
+            </svg>
+        </a>
+        
+        <!-- Botón para Guardar Contacto -->
+        <a id="save-contact-button" title="Guardar Contacto" class="absolute top-4 right-4 z-10 text-white bg-[#318CE7] p-2 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow" download="Gabriela_Vasconez.vcf">
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+            </svg>
+        </a>
+
+        <!-- Contenido que se puede desplazar -->
+        <div class="flex-grow overflow-y-auto">
+            <!-- Sección del encabezado con fondo y foto de perfil -->
+            <header class="relative">
+                <!-- Fondo con imagen en la parte superior ajustada -->
+                <div class="h-48 bg-cover wave-clip" style="background-image: url('https://i.postimg.cc/8Cfx98FT/Whats-App-Image-2026-10-12-at-3-38-53-PM.jpg'); background-position: center top -120px;">
+                </div>
+                
+                <!-- Contenedor de la foto de perfil para centrarla -->
+                <div class="absolute -bottom-16 left-1/2 -translate-x-1/2">
+                    <a href="https://www.instagram.com/exploramundo_op?stkn=MXFkYWxsMHlxaGZtMg%3D%3D&utm_source=qr" target="_blank" class="relative w-32 h-32 block hover:scale-105 transition-transform duration-300" title="Visitar Instagram">
+                        <img 
+                            src="https://i.postimg.cc/8Cfx98FT/Whats-App-Image-2026-10-12-at-3-38-53-PM.jpg" 
+                            alt="Foto de perfil de Ing. Gabriela Vásconez" 
+                            class="w-full h-full rounded-full border-4 border-[#F5F2EB] shadow-xl object-cover ring-4 ring-[#318CE7]"
+                            onerror="this.onerror=null;this.src='https://placehold.co/128x128/E9D5FF/3730A3?text=Foto&font=sans';"
+                        >
+                        <!-- Insignia de Verificación -->
+                        <div class="absolute bottom-1 right-1 bg-[#318CE7] border-2 border-white rounded-full p-1 shadow-md flex items-center justify-center w-7 h-7 text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <main class="pt-20 pb-8 px-6 text-center">
+                
+                <!-- Nombre y título -->
+                <h1 class="text-3xl font-bold text-black" style="font-family: 'Dancing Script', cursive;">Ing. Gabriela Vásconez</h1>
+                <p class="text-black mt-1 tracking-wide uppercase font-semibold text-sm">CEO & Gerente General</p>
+
+                <!-- Botón principal de llamada -->
+                <a href="tel:0978553300" class="mt-8 inline-flex items-center justify-center w-full px-6 py-3 bg-[#318CE7] text-white font-semibold rounded-full shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    Llámame
+                </a>
+
+                <!-- Iconos de redes sociales -->
+                <div class="mt-8 flex flex-wrap justify-center gap-4 px-4">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/share/1dKGfMtKmx/?mibextid=wwXIfr" target="_blank" class="text-center text-black hover:text-[#318CE7] transition-all duration-300 w-20">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center bg-white/90 rounded-full mb-2 shadow-md transform hover:scale-110 hover:shadow-lg transition-all duration-300 border border-blue-100">
+                            <svg class="w-8 h-8 text-[#318CE7]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12Z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <span class="text-xs font-semibold text-black">Facebook</span>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/exploramundo_op?stkn=MXFkYWxsMHlxaGZtMg%3D%3D&utm_source=qr" target="_blank" class="text-center text-black hover:text-[#318CE7] transition-all duration-300 w-20">
+                         <div class="w-16 h-16 mx-auto flex items-center justify-center bg-white/90 rounded-full mb-2 shadow-md transform hover:scale-110 hover:shadow-lg transition-all duration-300 border border-blue-100">
+                             <svg class="w-8 h-8 text-[#318CE7]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 0 1 1.772 1.153 4.902 4.902 0 0 1 1.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 0 1-1.153 1.772 4.902 4.902 0 0 1-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 0 1-1.772-1.153 4.902 4.902 0 0 1-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049 1.064.218-1.791.465-2.427a4.902 4.902 0 0 1 1.153-1.772A4.902 4.902 0 0 1 6.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2Z M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm4.5-9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <span class="text-xs font-semibold text-black">Instagram</span>
+                    </a>
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/593969550968" target="_blank" class="text-center text-black hover:text-[#318CE7] transition-all duration-300 w-20">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center bg-white/90 rounded-full mb-2 shadow-md transform hover:scale-110 hover:shadow-lg transition-all duration-300 border border-blue-100">
+                             <svg class="w-8 h-8 text-[#318CE7]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.31 20.6C8.75 21.42 10.36 21.88 12.04 21.88C17.5 21.88 21.95 17.43 21.95 11.97C21.95 9.31 20.95 6.8 19.05 4.9C17.15 3.00 14.65 2 12.04 2M12.04 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.71 20.28 11.92C20.28 16.46 16.65 20.21 12.04 20.21C10.56 20.21 9.14 19.83 7.89 19.11L7.55 18.93L4.44 19.8L5.33 16.78L5.15 16.44C4.38 15.09 4.00 13.57 4.00 11.97C4.00 7.43 7.63 3.67 12.04 3.67M9.23 7.53C9.07 7.53 8.81 7.59 8.61 7.9C8.41 8.21 7.81 8.78 7.81 9.84C7.81 10.9 8.63 11.92 8.79 12.11C8.95 12.31 10.16 14.11 11.96 14.82C13.76 15.54 14.34 15.36 14.73 15.3C15.12 15.24 16.03 14.73 16.22 14.19C16.42 13.65 16.42 13.2 16.32 13.04C16.22 12.88 16.06 12.78 15.82 12.66C15.58 12.54 14.53 12.04 14.33 11.96C14.13 11.88 13.99 11.82 13.85 12.06C13.71 12.3 13.28 12.8 13.14 12.96C13 13.12 12.86 13.16 12.62 13.04C12.38 12.92 11.69 12.69 10.84 11.95C10.15 11.35 9.68 10.6 9.54 10.34C9.4 10.08 9.53 9.94 9.65 9.82C9.77 9.7 9.93 9.5 10.09 9.34C10.25 9.18 10.31 9.04 10.45 8.8C10.59 8.56 10.53 8.38 10.43 8.22C10.33 8.06 9.83 7.53 9.63 7.53H9.23Z"></path></svg>
+                        </div>
+                        <span class="text-xs font-semibold text-black">WhatsApp</span>
+                    </a>
+                    <!-- Galería de eventos -->
+                    <a href="#" id="gallery-button" class="text-center text-black hover:text-[#318CE7] transition-all duration-300 w-20">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center bg-white/90 rounded-full mb-2 shadow-md transform hover:scale-110 hover:shadow-lg transition-all duration-300 border border-blue-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#318CE7]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        </div>
+                        <span class="text-xs font-semibold text-black">Galería</span>
+                    </a>
+                    
+                    <!-- Servicios -->
+                    <a href="#" id="services-button" class="text-center text-black hover:text-[#318CE7] transition-all duration-300 w-20">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center bg-white/90 rounded-full mb-2 shadow-md transform hover:scale-110 hover:shadow-lg transition-all duration-300 border border-blue-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#318CE7]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+                        </div>
+                        <span class="text-xs font-semibold text-black">Servicios</span>
+                    </a>
+                    <!-- Ubicación -->
+                    <a href="https://maps.app.goo.gl/sNNUTmWFfhAWrmXP9?g_st=iw" target="_blank" class="text-center text-black hover:text-[#318CE7] transition-all duration-300 w-20">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center bg-white/90 rounded-full mb-2 shadow-md transform hover:scale-110 hover:shadow-lg transition-all duration-300 border border-blue-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#318CE7]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        </div>
+                        <span class="text-xs font-semibold text-black">Ubicación</span>
+                    </a>
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@exploramundoop?_r=1&_t=ZS-9A5V82lxWPi" target="_blank" class="text-center text-black hover:text-[#318CE7] transition-all duration-300 w-20">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center bg-white/90 rounded-full mb-2 shadow-md transform hover:scale-110 hover:shadow-lg transition-all duration-300 border border-blue-100">
+                            <svg class="w-8 h-8 text-[#318CE7]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                        </div>
+                        <span class="text-xs font-semibold text-black">TikTok</span>
+                    </a>
+                    <!-- Presentación -->
+                    <a href="#" id="presentation-button" class="text-center text-black hover:text-[#318CE7] transition-all duration-300 w-20">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center bg-white/90 rounded-full mb-2 shadow-md transform hover:scale-110 hover:shadow-lg transition-all duration-300 border border-blue-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#318CE7]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" /></svg>
+                        </div>
+                        <span class="text-xs font-semibold text-black">Presentación</span>
+                    </a>
+                    <!-- Recomendaciones -->
+                    <a href="#" id="recommendations-button" class="text-center text-black hover:text-[#318CE7] transition-all duration-300 w-20">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center bg-white/90 rounded-full mb-2 shadow-md transform hover:scale-110 hover:shadow-lg transition-all duration-300 border border-blue-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#318CE7]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
+                        </div>
+                        <span class="text-xs font-semibold text-black">Recomendaciones</span>
+                    </a>
+                </div>
+            </main>
+        </div>
+        
+        <!-- Enlace de Correo y Pie de página Fijo -->
+        <div class="text-center pb-2">
+            <a href="mailto:exploramundoecu@hotmail.com" class="text-xs text-[#318CE7] font-medium hover:underline inline-block">exploramundoecu@hotmail.com</a>
+        </div>
+        <footer class="text-center pb-4">
+            <p class="font-semibold text-pink-600 footer-font">No vendemos viajes,</p>
+            <p class="font-semibold text-pink-600 footer-font">creamos recuerdos inolvidables</p>
+        </footer>
+
+    </div>
+
+    <!-- Modal del Código QR -->
+    <div id="qr-modal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 hidden z-50 opacity-0 transition-opacity duration-300">
+        <div class="bg-[#F5F2EB] rounded-2xl shadow-2xl p-8 max-w-xs w-full text-center relative transform transition-all duration-300 scale-95 opacity-0 border-2 border-black text-black" id="qr-modal-content">
+            <!-- Botón para cerrar el modal -->
+            <button id="close-qr-modal-btn" class="absolute top-3 right-3 text-black hover:opacity-70 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <h3 class="text-xl font-bold text-black mb-2">Comparte mi Tarjeta</h3>
+            <p class="text-black mb-4 text-sm opacity-80">Escanea el código QR con tu teléfono.</p>
+            <!-- Contenedor para la imagen del QR -->
+            <div class="p-2 border border-black bg-white shadow-inner rounded-lg inline-block">
+                <img id="qr-code-img" src="" alt="Código QR" class="w-48 h-48">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Servicios (Mini Landing Page) -->
+    <div id="services-modal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 hidden z-50 opacity-0 transition-opacity duration-300">
+        <div class="bg-[#F5F2EB] rounded-2xl shadow-2xl p-6 md:p-8 max-w-3xl w-full relative transform transition-all duration-300 scale-95 opacity-0 modal-content-scroll border-2 border-black text-black">
+            <!-- Botón para cerrar el modal -->
+            <button id="close-services-modal-btn" class="absolute top-4 right-4 z-10 text-black hover:opacity-70 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <div class="text-center px-4">
+                 <h2 class="text-2xl md:text-3xl font-bold text-black">Nuestros Paquetes y Excursiones</h2>
+                 <p class="mt-2 text-black max-w-lg mx-auto text-sm opacity-80">Explora nuestros destinos disponibles y vive momentos inolvidables.</p>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="services-grid">
+                <!-- COJIMÍES -->
+                <div class="bg-white p-4 rounded-xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-[#318CE7] text-white flex items-center justify-center mb-3 shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h10a4 4 0 004-4M3 15a2 2 0 012-2h14a2 2 0 012 2M3 15l2-7h14l2 7" /></svg>
+                        </div>
+                        <h3 class="font-bold text-black text-xl mb-1" style="font-family: 'Dancing Script', cursive;">Cojimíes 2 Días y 1 Noche</h3>
+                        <p class="text-xs text-neutral-700">Disfruta de playas tranquilas, atardeceres mágicos, mariscos frescos y relax total frente al mar.</p>
+                    </div>
+                    <a href="https://wa.me/593969550968?text=Hola,%20deseo%20reservar%20el%20paquete%20a%20Cojimíes" target="_blank" class="mt-4 w-full bg-[#318CE7] text-white text-xs font-semibold py-2 px-3 rounded-lg shadow hover:bg-blue-700 transition-all text-center flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        Reservar Viaje
+                    </a>
+                </div>
+
+                <!-- OYACACHI -->
+                <div class="bg-white p-4 rounded-xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-[#318CE7] text-white flex items-center justify-center mb-3 shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <h3 class="font-bold text-black text-xl mb-1" style="font-family: 'Dancing Script', cursive;">Oyacachi Full Day</h3>
+                        <p class="text-xs text-neutral-700">Termas volcánicas relajantes, hermosa arquitectura tallada en madera y deliciosa trucha fresca andina.</p>
+                    </div>
+                    <a href="https://wa.me/593969550968?text=Hola,%20deseo%20reservar%20Oyacachi%20Full%20Day" target="_blank" class="mt-4 w-full bg-[#318CE7] text-white text-xs font-semibold py-2 px-3 rounded-lg shadow hover:bg-blue-700 transition-all text-center flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        Reservar Viaje
+                    </a>
+                </div>
+
+                <!-- MISAHUALLI -->
+                <div class="bg-white p-4 rounded-xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-[#318CE7] text-white flex items-center justify-center mb-3 shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="font-bold text-black text-xl mb-1" style="font-family: 'Dancing Script', cursive;">Misahuallí Full Day</h3>
+                        <p class="text-xs text-neutral-700">Aventura en la Amazonía, interacción con monos silvestres, hermosas playas de río y cultura nativa.</p>
+                    </div>
+                    <a href="https://wa.me/593969550968?text=Hola,%20deseo%20reservar%20Misahuallí%20Full%20Day" target="_blank" class="mt-4 w-full bg-[#318CE7] text-white text-xs font-semibold py-2 px-3 rounded-lg shadow hover:bg-blue-700 transition-all text-center flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        Reservar Viaje
+                    </a>
+                </div>
+
+                <!-- PAPALLACTA -->
+                <div class="bg-white p-4 rounded-xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-[#318CE7] text-white flex items-center justify-center mb-3 shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                        </div>
+                        <h3 class="font-bold text-black text-xl mb-1" style="font-family: 'Dancing Script', cursive;">Papallacta Full Day</h3>
+                        <p class="text-xs text-neutral-700">Pristinas aguas termales medicinales rodeadas de páramo andino, aire puro y máxima relajación.</p>
+                    </div>
+                    <a href="https://wa.me/593969550968?text=Hola,%20deseo%20reservar%20Papallacta%20Full%20Day" target="_blank" class="mt-4 w-full bg-[#318CE7] text-white text-xs font-semibold py-2 px-3 rounded-lg shadow hover:bg-blue-700 transition-all text-center flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        Reservar Viaje
+                    </a>
+                </div>
+
+                <!-- ATACAMES -->
+                <div class="bg-white p-4 rounded-xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-[#318CE7] text-white flex items-center justify-center mb-3 shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" /></svg>
+                        </div>
+                        <h3 class="font-bold text-black text-xl mb-1" style="font-family: 'Dancing Script', cursive;">Atacames 2 Días y 1 Noche</h3>
+                        <p class="text-xs text-neutral-700">Sol, playa, ambiente alegre con música tropical, gastronomía esmeraldeña y diversión nocturna.</p>
+                    </div>
+                    <a href="https://wa.me/593969550968?text=Hola,%20deseo%20reservar%20Atacames" target="_blank" class="mt-4 w-full bg-[#318CE7] text-white text-xs font-semibold py-2 px-3 rounded-lg shadow hover:bg-blue-700 transition-all text-center flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        Reservar Viaje
+                    </a>
+                </div>
+
+                <!-- PASTO -->
+                <div class="bg-white p-4 rounded-xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-[#318CE7] text-white flex items-center justify-center mb-3 shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                        </div>
+                        <h3 class="font-bold text-black text-xl mb-1" style="font-family: 'Dancing Script', cursive;">Pasto Tour de Compras 2D/1N</h3>
+                        <p class="text-xs text-neutral-700">El mejor recorrido comercial para adquirir prendas, calzado y artículos variados a excelentes precios.</p>
+                    </div>
+                    <a href="https://wa.me/593969550968?text=Hola,%20deseo%20reservar%20Pasto%20Tour%20de%20Compras" target="_blank" class="mt-4 w-full bg-[#318CE7] text-white text-xs font-semibold py-2 px-3 rounded-lg shadow hover:bg-blue-700 transition-all text-center flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        Reservar Viaje
+                    </a>
+                </div>
+
+                <!-- PUERTO LÓPEZ -->
+                <div class="bg-white p-4 rounded-xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-[#318CE7] text-white flex items-center justify-center mb-3 shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
+                        </div>
+                        <h3 class="font-bold text-black text-xl mb-1" style="font-family: 'Dancing Script', cursive;">Puerto López 3D/2N</h3>
+                        <p class="text-xs text-neutral-700">Isla de la Plata, avistamiento de ballenas jorobadas, parque nacional Machalilla e impresionante biodiversidad.</p>
+                    </div>
+                    <a href="https://wa.me/593969550968?text=Hola,%20deseo%20reservar%20Puerto%20López" target="_blank" class="mt-4 w-full bg-[#318CE7] text-white text-xs font-semibold py-2 px-3 rounded-lg shadow hover:bg-blue-700 transition-all text-center flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        Reservar Viaje
+                    </a>
+                </div>
+
+                <!-- BAÑOS -->
+                <div class="bg-white p-4 rounded-xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-[#318CE7] text-white flex items-center justify-center mb-3 shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="font-bold text-black text-xl mb-1" style="font-family: 'Dancing Script', cursive;">Baños Full Day</h3>
+                        <p class="text-xs text-neutral-700">Capital de la aventura: cascadas imponentes, deportes extremos, la Casa del Árbol y vibrante ambiente.</p>
+                    </div>
+                    <a href="https://wa.me/593969550968?text=Hola,%20deseo%20reservar%20Baños%20Full%20Day" target="_blank" class="mt-4 w-full bg-[#318CE7] text-white text-xs font-semibold py-2 px-3 rounded-lg shadow hover:bg-blue-700 transition-all text-center flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        Reservar Viaje
+                    </a>
+                </div>
+
+                <!-- MINDO -->
+                <div class="bg-white p-4 rounded-xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-[#318CE7] text-white flex items-center justify-center mb-3 shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+                        </div>
+                        <h3 class="font-bold text-black text-xl mb-1" style="font-family: 'Dancing Script', cursive;">Mindo Full Day</h3>
+                        <p class="text-xs text-neutral-700">Santuario de aves, tarabitas sobre el bosque nublado, mariposarios y ecoturismo inolvidable.</p>
+                    </div>
+                    <a href="https://wa.me/593969550968?text=Hola,%20deseo%20reservar%20Mindo%20Full%20Day" target="_blank" class="mt-4 w-full bg-[#318CE7] text-white text-xs font-semibold py-2 px-3 rounded-lg shadow hover:bg-blue-700 transition-all text-center flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        Reservar Viaje
+                    </a>
+                </div>
+
+                <!-- TREN TAYTA IMBABURA -->
+                <div class="bg-white p-4 rounded-xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow sm:col-span-2 md:col-span-1">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-[#318CE7] text-white flex items-center justify-center mb-3 shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" /></svg>
+                        </div>
+                        <h3 class="font-bold text-black text-xl mb-1" style="font-family: 'Dancing Script', cursive;">Tren Tayta Imbabura</h3>
+                        <p class="text-xs text-neutral-700">Ruta ferroviaria histórica, paisajes andinos espectaculares, lagos y cultura viva de Imbabura.</p>
+                    </div>
+                    <a href="https://wa.me/593969550968?text=Hola,%20deseo%20reservar%20Tren%20Tayta%20Imbabura" target="_blank" class="mt-4 w-full bg-[#318CE7] text-white text-xs font-semibold py-2 px-3 rounded-lg shadow hover:bg-blue-700 transition-all text-center flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        Reservar Viaje
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal para Instalar Tarjeta -->
+    <div id="install-modal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 hidden z-50 opacity-0 transition-opacity duration-300">
+        <div class="bg-[#F5F2EB] rounded-2xl shadow-2xl p-8 max-w-md w-full relative transform transition-all duration-300 scale-95 opacity-0 modal-content-scroll border-2 border-black text-black" id="install-modal-content">
+            <!-- Botón para cerrar el modal -->
+            <button id="close-install-modal-btn" class="absolute top-3 right-3 text-black hover:opacity-70 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <div class="text-center">
+                <h3 class="text-2xl font-bold text-black">Instala mi Tarjeta</h3>
+                <p class="text-black mt-2 text-sm opacity-80">Acceso directo desde tu pantalla de inicio.</p>
+            </div>
+            
+            <div class="mt-6 space-y-4">
+                <!-- Instrucciones para iOS -->
+                <div class="bg-white p-4 rounded-lg border border-black/20">
+                    <h4 class="font-semibold text-base text-black flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#318CE7]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.096 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        Para iOS (iPhone)
+                    </h4>
+                    <p class="mt-2 text-neutral-700 text-xs">1. Pulsa el ícono de <span class="font-semibold text-black">Compartir</span> <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block -mt-1 text-[#318CE7]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg> en tu navegador.</p>
+                    <p class="mt-1 text-neutral-700 text-xs">2. Desliza hacia arriba y selecciona <span class="font-semibold text-black">"Agregar a la pantalla de inicio"</span>.</p>
+                </div>
+                <!-- Instrucciones para Android -->
+                <div class="bg-white p-4 rounded-lg border border-black/20">
+                    <h4 class="font-semibold text-base text-black flex items-center">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#318CE7]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>
+                        Para Android
+                    </h4>
+                    <p class="mt-2 text-neutral-700 text-xs">1. Pulsa los <span class="font-semibold text-black">tres puntos</span> <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block -mt-1 text-[#318CE7]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" /></svg> en la esquina superior.</p>
+                    <p class="mt-1 text-neutral-700 text-xs">2. Selecciona <span class="font-semibold text-black">"Instalar aplicación"</span> o <span class="font-semibold text-black">"Agregar a pantalla principal"</span>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Galería de Eventos -->
+    <div id="gallery-modal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 hidden z-50 opacity-0 transition-opacity duration-300">
+        <div class="bg-[#F5F2EB] rounded-2xl shadow-2xl p-6 max-w-lg w-full relative transform transition-all duration-300 scale-95 opacity-0 border-2 border-black text-black" id="gallery-modal-content">
+             <!-- Botón para cerrar el modal -->
+             <button id="close-gallery-modal-btn" class="absolute -top-3 -right-3 z-20 text-black bg-white rounded-full p-1 hover:opacity-70 transition-all shadow">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#318CE7]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </button>
+            <h2 class="text-2xl font-bold text-center mb-4 text-black">Galería de Eventos</h2>
+            
+            <!-- Carrusel -->
+            <div id="carousel-container" class="relative w-full overflow-hidden rounded-lg">
+                <div id="carousel-track" class="flex">
+                    <!-- Las imágenes se insertarán aquí desde JS -->
+                </div>
+                <!-- Botones de Navegación -->
+                <button id="prev-button" class="absolute top-1/2 left-2 -translate-y-1/2 bg-white/90 text-[#318CE7] rounded-full p-2 hover:bg-white transition-colors shadow">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <button id="next-button" class="absolute top-1/2 right-2 -translate-y-1/2 bg-white/90 text-[#318CE7] rounded-full p-2 hover:bg-white transition-colors shadow">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                </button>
+            </div>
+            <!-- Indicadores (puntos) -->
+            <div id="carousel-dots" class="flex justify-center mt-4 space-x-2">
+                <!-- Los puntos se insertarán aquí desde JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Presentación -->
+    <div id="presentation-modal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 hidden z-50 opacity-0 transition-opacity duration-300">
+        <div class="bg-[#F5F2EB] rounded-2xl shadow-2xl p-6 md:p-8 max-w-md w-full relative transform transition-all duration-300 scale-95 opacity-0 border-2 border-black text-center modal-content-scroll text-black" id="presentation-modal-content">
+            <!-- Botón para cerrar el modal -->
+            <button id="close-presentation-modal-btn" class="absolute top-4 right-4 z-10 text-black hover:opacity-70 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <h2 class="text-2xl font-bold text-black mb-2" style="font-family: 'Dancing Script', cursive;">Bienvenido a Exploramundo</h2>
+            <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-2 border-[#318CE7] shadow-md">
+                <img src="https://i.postimg.cc/8Cfx98FT/Whats-App-Image-2026-10-12-at-3-38-53-PM.jpg" alt="Ing. Gabriela Vásconez" class="w-full h-full object-cover">
+            </div>
+            <p class="text-xs text-black font-semibold mb-3">Ing. Gabriela Vásconez • CEO & Fundadora</p>
+            
+            <div class="space-y-3 text-xs text-neutral-800 text-left leading-relaxed bg-white p-4 rounded-xl border border-black/20 shadow-inner">
+                <p>
+                    <strong class="text-black">Exploramundo</strong> nace del sueño profundo de transformar cada destino en una travesía extraordinaria. Bajo el liderazgo de la <strong class="text-black">Ing. Gabriela Vásconez</strong>, nos especializamos en diseñar experiencias turísticas de alta calidad, combinando confort, seguridad y aventura genuina.
+                </p>
+                <p>
+                    Creemos firmemente que viajar no es solo trasladarse de un lugar a otro, sino coleccionar instantes que perduran toda la vida. Por ello, cada excursión, desde nuestras paradisíacas costas hasta la majestuosidad de los Andes y la magia de la Amazonía, está meticulosamente planificada para superar tus expectativas.
+                </p>
+                <p class="font-medium text-center text-black italic pt-1">
+                    ✨ "Permítenos guiar tus pasos hacia tu próxima gran aventura. ¡Tu felicidad es nuestro mejor destino!"
+                </p>
+            </div>
+            
+            <a href="https://wa.me/593969550968?text=Hola,%20deseo%20más%20información%20sobre%20los%20tours%20de%20Exploramundo" target="_blank" class="mt-5 w-full bg-[#318CE7] text-white text-xs font-semibold py-2.5 px-4 rounded-xl shadow hover:bg-blue-700 transition-all text-center flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                Conversar con Asesoría
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal de Recomendaciones -->
+    <div id="recommendations-modal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 hidden z-50 opacity-0 transition-opacity duration-300">
+        <div class="bg-[#F5F2EB] rounded-2xl shadow-2xl p-6 md:p-8 max-w-lg w-full relative transform transition-all duration-300 scale-95 opacity-0 border-2 border-black text-center modal-content-scroll text-black" id="recommendations-modal-content">
+            <!-- Botón para cerrar el modal -->
+            <button id="close-recommendations-modal-btn" class="absolute top-4 right-4 z-10 text-black hover:opacity-70 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <h2 class="text-2xl font-bold text-black mb-1" style="font-family: 'Dancing Script', cursive;">Recomendaciones y Testimonios</h2>
+            <p class="text-black text-xs mb-4 opacity-80">Lo que dicen nuestros viajeros sobre su experiencia con Exploramundo:</p>
+            
+            <div class="space-y-3 text-left text-xs text-neutral-800">
+                <!-- Recomendación 1 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Camila Andrade (24 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"El tour a Baños superó todas mis expectativas. La atención de la Ing. Gabriela y su equipo es impecable, muy seguros y puntuales. ¡Ya estoy reservando mi próximo viaje!"</p>
+                </div>
+
+                <!-- Recomendación 2 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Mateo Benalcázar (31 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"Fui al tour de compras en Pasto y me ahorré muchísimo dinero con total comodidad. Los buses son excelentes y el guía súper atento. ¡Totalmente recomendado!"</p>
+                </div>
+
+                <!-- Recomendación 3 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Valeria Cárdenas (45 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"Viajé con toda mi familia a Cojimíes y la pasamos increíble. La organización es perfecta para ir con niños y adultos mayores. ¡Gracias Exploramundo!"</p>
+                </div>
+
+                <!-- Recomendación 4 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Esteban Delgado (28 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"Misahuallí Full Day fue una aventura alucinante. Ver los monos y recorrer el río con esta agencia es una experiencia que todos deberían vivir al menos una vez."</p>
+                </div>
+
+                <!-- Recomendación 5 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Lucía Espinoza (36 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"El viaje a Papallacta me devolvió la energía. Las termas y la comida incluida estuvieron de primera. ¡La calidez humana de Exploramundo es única!"</p>
+                </div>
+
+                <!-- Recomendación 6 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Fernando Flores (50 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"Excelente servicio en el Tren Tayta Imbabura. Puntualidad, cultura y paisajes maravillosos. Da gusto viajar con profesionales tan dedicados."</p>
+                </div>
+
+                <!-- Recomendación 7 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Daniela Gómez (22 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"¡Mindo Full Day fue lo máximo! Las tarabitas, las mariposas y el ambiente juvenil hicieron que pasara un fin de semana inolvidable con mis amigos."</p>
+                </div>
+
+                <!-- Recomendación 8 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Javier Hidalgo (39 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"Puerto López superó mis expectativas con el avistamiento de ballenas. Todo muy bien coordinado desde el inicio hasta el regreso. ¡De 10!"</p>
+                </div>
+
+                <!-- Recomendación 9 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Sofía Jaramillo (29 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"Atacames 2D/1N fue pura diversión. El hotel excelente y la playa hermosa. Recomiendo a ojos cerrados a Exploramundo para tus vacaciones."</p>
+                </div>
+
+                <!-- Recomendación 10 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Gabriel Larrea (53 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"Oyacachi Full Day me encantó por su tranquilidad y las piscinas termales. La logística de la agencia es impecable y muy seria."</p>
+                </div>
+
+                <!-- Recomendación 11 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Mariana Moncayo (26 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"Me encantó la facilidad para reservar por WhatsApp y la amabilidad de la Ing. Gabriela al resolver todas mis dudas. ¡Volveré a viajar pronto!"</p>
+                </div>
+
+                <!-- Recomendación 12 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Ricardo Navas (35 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"Los precios son súper justos para la alta calidad de los hoteles y el transporte. Sin duda la mejor agencia de turismo del país."</p>
+                </div>
+
+                <!-- Recomendación 13 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Natalia Pazmiño (41 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"Viajar sola al tour de compras en Pasto me daba un poco de nervios, pero con Exploramundo me sentí segura y cuidada todo el tiempo. ¡Excelente!"</p>
+                </div>
+
+                <!-- Recomendación 14 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Andrés Quintero (33 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"El ambiente en los tours es maravilloso, conocí gente genial y la diversión nunca faltó. ¡Gracias por crear recuerdos tan hermosos!"</p>
+                </div>
+
+                <!-- Recomendación 15 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Paola Ruales (27 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"¡Impecable de principio a fin! Los paisajes, los tiempos programados y la buena vibra del equipo hacen que Exploramundo sea mi agencia favorita."</p>
+                </div>
+
+                <!-- Recomendación 16 -->
+                <div class="bg-white p-3 rounded-xl border border-black/20 shadow-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-black">Roberto Salazar (48 años)</span>
+                        <span class="text-black text-xs font-semibold">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="italic text-neutral-700">"La seriedad y el profesionalismo se nota en cada detalle. Viajé a Baños con mi esposa y quedamos fascinados. ¡Los recomiendo al 100%!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Lógica para el Modal del Código QR ---
+            const qrButton = document.querySelector('#qr-button');
+            const qrModal = document.querySelector('#qr-modal');
+            const qrModalContent = document.querySelector('#qr-modal-content');
+            const closeQrModalBtn = document.querySelector('#close-qr-modal-btn');
+            const qrCodeImg = document.querySelector('#qr-code-img');
+
+            if (qrButton) {
+                const showQrModal = () => {
+                    const currentUrl = window.location.href;
+                    const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(currentUrl)}`;
+                    qrCodeImg.src = qrApiUrl;
+                    qrModal.classList.remove('hidden');
+                    setTimeout(() => {
+                        qrModal.classList.add('opacity-100');
+                        qrModalContent.classList.remove('scale-95', 'opacity-0');
+                        qrModalContent.classList.add('scale-100', 'opacity-100');
+                    }, 10);
+                };
+
+                const hideQrModal = () => {
+                    qrModalContent.classList.add('scale-95', 'opacity-0');
+                    qrModal.classList.remove('opacity-100');
+                    setTimeout(() => qrModal.classList.add('hidden'), 300);
+                };
+
+                qrButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showQrModal();
+                });
+                if (closeQrModalBtn) {
+                    closeQrModalBtn.addEventListener('click', hideQrModal);
+                }
+            }
+
+            // --- Lógica para el Modal de Servicios ---
+            const servicesButton = document.querySelector('#services-button');
+            const servicesModal = document.querySelector('#services-modal');
+            const servicesModalContent = servicesModal.querySelector('.modal-content-scroll');
+            const closeServicesModalBtn = document.querySelector('#close-services-modal-btn');
+
+            const showServicesModal = () => {
+                servicesModal.classList.remove('hidden');
+                setTimeout(() => {
+                    servicesModal.classList.add('opacity-100');
+                    servicesModalContent.classList.remove('scale-95', 'opacity-0');
+                    servicesModalContent.classList.add('scale-100', 'opacity-100');
+                }, 10);
+            };
+
+            const hideServicesModal = () => {
+                servicesModalContent.classList.add('scale-95', 'opacity-0');
+                servicesModal.classList.remove('opacity-100');
+                setTimeout(() => servicesModal.classList.add('hidden'), 300);
+            };
+            
+            servicesButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                showServicesModal();
+            });
+            closeServicesModalBtn.addEventListener('click', hideServicesModal);
+
+            // --- Lógica para el Modal de Instalación ---
+            const installButton = document.querySelector('#install-button');
+            const installModal = document.querySelector('#install-modal');
+            const installModalContent = document.querySelector('#install-modal-content');
+            const closeInstallModalBtn = document.querySelector('#close-install-modal-btn');
+
+            const showInstallModal = () => {
+                installModal.classList.remove('hidden');
+                 setTimeout(() => {
+                    installModal.classList.add('opacity-100');
+                    installModalContent.classList.remove('scale-95', 'opacity-0');
+                    installModalContent.classList.add('scale-100', 'opacity-100');
+                }, 10);
+            };
+
+            const hideInstallModal = () => {
+                installModalContent.classList.add('scale-95', 'opacity-0');
+                installModal.classList.remove('opacity-100');
+                setTimeout(() => installModal.classList.add('hidden'), 300);
+            };
+
+            installButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                showInstallModal();
+            });
+            closeInstallModalBtn.addEventListener('click', hideInstallModal);
+
+            // --- Lógica para el Modal de Galería y Carrusel ---
+            const galleryButton = document.getElementById('gallery-button');
+            const galleryModal = document.getElementById('gallery-modal');
+            const galleryModalContent = document.getElementById('gallery-modal-content');
+            const closeGalleryModalBtn = document.getElementById('close-gallery-modal-btn');
+            const carouselTrack = document.getElementById('carousel-track');
+            const prevButton = document.getElementById('prev-button');
+            const nextButton = document.getElementById('next-button');
+            const dotsContainer = document.getElementById('carousel-dots');
+            
+            const images = [
+                'https://i.postimg.cc/Y9qD7J01/Whats-App-Image-2026-10-12-at-3-52-36-PM.jpg',
+                'https://i.postimg.cc/mZSMCtdW/Whats-App-Image-2026-10-12-at-3-52-07-PM.jpg',
+                'https://i.postimg.cc/CKYSGLr0/Whats-App-Image-2026-10-12-at-4-02-27-PM.jpg',
+                'https://i.postimg.cc/HnNDNb0m/Whats-App-Image-2026-10-12-at-4-13-24-PM.jpg',
+                'https://i.postimg.cc/x8hh5nYY/Whats-App-Image-2026-10-12-at-4-08-08-PM(1).jpg'
+            ];
+
+            let currentIndex = 0;
+
+            const updateCarousel = () => {
+                carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+                const dots = dotsContainer.querySelectorAll('button');
+                dots.forEach((dot, index) => {
+                    if (index === currentIndex) {
+                        dot.classList.add('bg-[#318CE7]');
+                        dot.classList.remove('bg-gray-300');
+                    } else {
+                        dot.classList.remove('bg-[#318CE7]');
+                        dot.classList.add('bg-gray-300');
+                    }
+                });
+            };
+
+            const initCarousel = () => {
+                carouselTrack.innerHTML = '';
+                dotsContainer.innerHTML = '';
+                images.forEach((src, index) => {
+                    const slide = document.createElement('div');
+                    slide.className = 'carousel-slide flex-shrink-0 w-full flex items-center justify-center bg-black/5 rounded-lg overflow-hidden h-72';
+                    slide.innerHTML = `<img src="${src}" alt="Evento ${index + 1}" class="max-h-full max-w-full object-contain">`;
+                    carouselTrack.appendChild(slide);
+
+                    const dot = document.createElement('button');
+                    dot.className = 'w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors';
+                    dot.addEventListener('click', () => {
+                        currentIndex = index;
+                        updateCarousel();
+                    });
+                    dotsContainer.appendChild(dot);
+                });
+                updateCarousel();
+            };
+
+            if (galleryButton) {
+                galleryButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    galleryModal.classList.remove('hidden');
+                    setTimeout(() => {
+                        galleryModal.classList.add('opacity-100');
+                        galleryModalContent.classList.remove('scale-95', 'opacity-0');
+                        galleryModalContent.classList.add('scale-100', 'opacity-100');
+                    }, 10);
+                    initCarousel();
+                });
+            }
+
+            const hideGalleryModal = () => {
+                galleryModalContent.classList.add('scale-95', 'opacity-0');
+                galleryModal.classList.remove('opacity-100');
+                setTimeout(() => galleryModal.classList.add('hidden'), 300);
+            };
+
+            if (closeGalleryModalBtn) {
+                closeGalleryModalBtn.addEventListener('click', hideGalleryModal);
+            }
+
+            if (nextButton) {
+                nextButton.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    updateCarousel();
+                });
+            }
+
+            if (prevButton) {
+                prevButton.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    updateCarousel();
+                });
+            }
+
+            // --- Lógica para el Modal de Presentación ---
+            const presentationButton = document.getElementById('presentation-button');
+            const presentationModal = document.getElementById('presentation-modal');
+            const presentationModalContent = document.getElementById('presentation-modal-content');
+            const closePresentationModalBtn = document.getElementById('close-presentation-modal-btn');
+
+            const showPresentationModal = () => {
+                presentationModal.classList.remove('hidden');
+                setTimeout(() => {
+                    presentationModal.classList.add('opacity-100');
+                    presentationModalContent.classList.remove('scale-95', 'opacity-0');
+                    presentationModalContent.classList.add('scale-100', 'opacity-100');
+                }, 10);
+            };
+
+            const hidePresentationModal = () => {
+                presentationModalContent.classList.add('scale-95', 'opacity-0');
+                presentationModal.classList.remove('opacity-100');
+                setTimeout(() => presentationModal.classList.add('hidden'), 300);
+            };
+
+            if (presentationButton) {
+                presentationButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showPresentationModal();
+                });
+            }
+
+            if (closePresentationModalBtn) {
+                closePresentationModalBtn.addEventListener('click', hidePresentationModal);
+            }
+
+            // --- Lógica para el Modal de Recomendaciones ---
+            const recommendationsButton = document.getElementById('recommendations-button');
+            const recommendationsModal = document.getElementById('recommendations-modal');
+            const recommendationsModalContent = document.getElementById('recommendations-modal-content');
+            const closeRecommendationsModalBtn = document.getElementById('close-recommendations-modal-btn');
+
+            const showRecommendationsModal = () => {
+                recommendationsModal.classList.remove('hidden');
+                setTimeout(() => {
+                    recommendationsModal.classList.add('opacity-100');
+                    recommendationsModalContent.classList.remove('scale-95', 'opacity-0');
+                    recommendationsModalContent.classList.add('scale-100', 'opacity-100');
+                }, 10);
+            };
+
+            const hideRecommendationsModal = () => {
+                recommendationsModalContent.classList.add('scale-95', 'opacity-0');
+                recommendationsModal.classList.remove('opacity-100');
+                setTimeout(() => recommendationsModal.classList.add('hidden'), 300);
+            };
+
+            if (recommendationsButton) {
+                recommendationsButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showRecommendationsModal();
+                });
+            }
+
+            if (closeRecommendationsModalBtn) {
+                closeRecommendationsModalBtn.addEventListener('click', hideRecommendationsModal);
+            }
+        });
+    </script>
+</body>
+</html>
